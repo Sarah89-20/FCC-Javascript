@@ -33,15 +33,32 @@ const reviews = [
     const randomBtn = document.querySelector('.random-btn');
 
     //set starting item
-    let currentItem = 1;
+    let currentItem = 0;
 
     //load initial item
 
     window.addEventListener('DOMContentLoaded', function(){
-        const item = reviews[currentItem];
-        console.log(author);
+        showPerson(currentItem);
+    });
 
+    function showPerson(person){
+        const item = reviews[person];
         author.textContent = item.name;
         job.textContent = item.job;
         info.textContent = item.text;
+    };
+
+    nextBtn.addEventListener('click', function(){
+        currentItem++;
+        if(currentItem > reviews.length - 1 ){ 
+            currentItem = 0;
+        };
+        showPerson(currentItem);
+    });
+    prevBtn.addEventListener('click', function(){
+        currentItem--;
+        if(currentItem < 0 ){ 
+            currentItem = reviews.length -1;
+        };
+        showPerson(currentItem);
     });
