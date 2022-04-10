@@ -1,0 +1,41 @@
+
+body{
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul{
+    margin: 0 auto;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    padding: 2%;
+}
+nav ul li a {
+    color: rgb(56, 176, 197);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;       
+}
+    /*navbar header*/
+h1{
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px rgb(202, 202, 202);
+}
+span{
+    color:rgb(56, 176, 197);
+}
+
+  /*hamburger button*/
+button{
+    background-color: white;
+    border: none;
+}
+i{
+    background-color: white;
+    color: rgb(56, 176, 197);
+    font-size: 2em;
+}
+  
