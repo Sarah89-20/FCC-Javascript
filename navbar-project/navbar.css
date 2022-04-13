@@ -1,50 +1,55 @@
-
+* {
+    box-sizing: border-box;
+  }
 body{
     margin: 0;
+    padding: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color:rgb(212, 235, 235);
+    background-color:rgb(192, 224, 224);
 }
-
-.nav-header{
+nav{
     background-color: white;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    box-shadow: 5px 5px 20px rgb(198, 198, 198);    
+    box-shadow: 5px 5px 30px rgb(198, 198, 198);    
 }
 ul{
-    list-style: none;
+    overflow: hidden;  
     margin: 0;
-    padding: 0;
-    overflow: hidden;
+    padding: 0;  
+    display: flex;
 }
 
 li{ 
-    display: inline-block;
-    padding: 0px 20px;
-}
-li a:hover{
-  color:rgb(192, 241, 241);
+    list-style: none;
 }
 
 li a {  
     color: rgb(56, 176, 197);
     text-align: center;
     text-decoration: none;
-    font-size: 2em;
-         
+    font-size: 2em;   
+    display: block;   
+    padding: 1rem;
 }
 
-.emoji{
-    font-size: 2em;
-    width: 150px;
+li a:hover{
+  color:rgb(192, 241, 241);
 }
 
+
+/*icons*/
+.icon-links{
+    margin-right: 20px;
+}
 
 /*hamburger button*/
 button{
- width: 30%;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    width: 30%;
     background-color: white;
     border: none;
     display: none;
@@ -54,7 +59,6 @@ i{
     color: rgb(56, 176, 197);
     font-size: 2em;
 }
-
 i:hover{
     color:rgb(192, 241, 241);
 }
@@ -64,15 +68,46 @@ img{
     width: 200px;
 }
 
-@media screen and (max-width: 850px){
+/*setting stuff up for smaller screen size*/
+@media  (max-width: 850px){
 button{
     display: flex;
-    justify-content: center;
+    justify-content:end;
 }
-.emoji{
+
+.icon-links{
     display: none;
 }
+
+nav{     
+    flex-direction: column;   
+    align-items: flex-start;    
+}
+
+ul{  
+    width: 100%;
+    flex-direction: column;
+}
+
+ul a{
+    color: black;
+    padding: 1%;
+    font-size: 1.5em;
+}
+ul a:hover{
+    background: rgb(135, 196, 229);
+    font-style: italic;
+}
+
 .links{
     display: none;
+    width: 100%;
+    
 }
+
+.links.active{
+    display: flex;
+    flex-direction: column;
+}
+
 }
