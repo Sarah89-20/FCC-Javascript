@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(229, 252, 252);
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+     width: 30%;
+     height: 100%;
+     background: white;
+     display: grid;
+     grid-template-rows: auto 1fr auto;
+     row-gap: 1rem;  
+     transform: translate(-100%);  
+}
+.sidebar.show-sidebar{
+    transform: translate(0);
+}
+.sb-header{
+    display: flex;
+    justify-content:space-between; 
+}
+/*navigation ul */
+ul{
+    overflow: hidden;  
+    margin: 0;
+    padding: 0;  
+}
+
+li{ 
+    list-style: none;
+}
+
+li a{  
+    color: rgb(100, 99, 99);
+    text-decoration: none;
+    font-size: 2em;   
+    display: block;   
+    padding: .5rem;
+    transition: 1s;
+}
+
+li a:hover{
+transform: translate(15px);
+  color:rgb(192, 241, 241);
+}
+
+/*close btn*/
+.close-btn{
+    background-color: white;
+    border: none;
+    margin-right: 3%;
+}
+.close-btn i{
+    font-size: 2em;
+    color: rgb(179, 3, 3);
+    background-color: white;
+    font-weight: bold;
+    transition: 2s;
+}
+
+.close-btn i:hover {
+    color: rgb(179, 3, 3);
+transform: rotate(180deg);
+}
+
+/*social icons*/
+.icon-links{
+  
+    margin: 20px;
+    text-align: center;
+}
+.icon-links i{
+    background-color: rgb(229, 252, 252);
+    color: rgb(56, 176, 197);
+    font-size: 2em;
+}
+
+
+/*hamburger button*/
+.sb-toggle{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;   
+    background-color: rgb(229, 252, 252);
+    border: none;
+    /* display: none; */
+}
+.sb-toggle i{
+    background-color: rgb(229, 252, 252);
+    color: rgb(56, 176, 197);
+    font-size: 2em;
+    transition: 1s;
+}
+.sb-toggle i:hover{
+    transform: rotate(180deg);
+}
+
+
+/*logo*/
+img{
+    width: 200px;
+}
+
+/*setting stuff up for smaller screen size*/
+@media  (max-width: 850px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
