@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-image: url('modal-pic.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;     
+}
+
+h3{
+    font-size: 2em;
+}
+p{
+    background-color: rgb(233, 232, 232, .8);
+    width: 25%;
+}
+
+.modal-btn{
+    background: rgb(96, 117, 108);
+   color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.25em;
+    padding: 2% 4%;
+}
+
+/* close button */
+.close-btn{ 
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background:rgb(233, 232, 232);
+    border-radius: 5px;
+    border: none;
+    font-size: 1.25em;   
+}
+.close-btn i{
+    color: rgb(169, 4, 4);
+    font-size: 1.5em;
+}
+
+/* containers */
+.hero, .modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+/* styles used to toggle the modal */
+.modal-overlay{
+    visibility: hidden;
+    z-index: -10;
+}
+.open-modal{
+    visibility: visible;
+    z-index: 10; 
+}
+
+/* inner divs */
+.banner{     
+    box-shadow: 5px 5px 20px black;    
+    background: rgb(233, 232, 232);
+    width: 30%;
+    height: 200px;
+    padding: 2%;
+    border-radius: 5px; 
+    text-align: center;
+}
+.modal-container{  
+    position: relative;
+    box-shadow: 5px 5px 20px black;    
+    background: rgb(233, 232, 232);
+    width: 30%;
+    height: 200px;
+    padding: 2%;
+    border-radius: 5px; 
+    text-align: center;   
+}
+
