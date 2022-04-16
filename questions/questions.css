@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Updock&display=swap');
+
+/* 
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Updock', cursive; 
+*/
+body{
+    background-color: rgb(230, 239, 248);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+h2{
+    font-family: 'Updock', cursive; 
+    font-size: 2em;
+    color: rgb(182, 157, 11);
+}
+
+.question-title{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/*positions content*/
+.questions{
+    margin-top: 15%;
+    display: grid;
+    place-items: center;
+}
+
+/* styling icons */
+button{   
+    background-color: rgb(230, 239, 248);
+    border: none;
+}
+.plus-icon{
+    font-size: 1.5em;
+    color: rgb(182, 157, 11);
+    
+}
+
+/*normal status*/
+.question-text{
+    display: none;
+}
+.minus-icon{
+    display: none;   
+}
+
+/*class gets added and switches plus and minus icons and displays the question text*/
+.show-text .question-text{
+    display: block;
+}
+.show-text .minus-icon{
+    display: inline;   
+}
+.show-text .plus-icon{
+    display: none;   
+}
