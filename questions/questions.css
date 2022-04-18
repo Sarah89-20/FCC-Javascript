@@ -8,17 +8,6 @@ body{
     background-color: rgb(230, 239, 248);
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
-h2{
-    font-family: 'Updock', cursive; 
-    font-size: 2em;
-    color: rgb(182, 157, 11);
-}
-
-.question-title{
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;  
-}
 
 /*positions content of page*/
 .questions{
@@ -39,6 +28,16 @@ h2{
     margin: 20px;
     background: white;
     box-shadow: 5px 5px 10px rgb(191, 191, 191);
+}
+.question-title{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+}
+h2{
+    font-family: 'Updock', cursive; 
+    font-size: 2em;
+    color: rgb(182, 157, 11);
 }
 
 /* styling icons */

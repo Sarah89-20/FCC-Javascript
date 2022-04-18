@@ -1,27 +1,31 @@
-// const plusIcon = document.querySelector('.plus-icon');
-// const minusIcon = document.querySelector('.minus-icon');
-// const questText = document.querySelector('.question-text');
+// Traversing The DOM -- option 1
+// const btns = document.querySelectorAll('.question-btn');
 
-// plusIcon.addEventListener('click', function(){
-//     plusIcon.classList.add('show-text');
-//     minusIcon.classList.add('show-text');
-//     questText.classList.add('show-text');
-//     console.log(questText.classList);
-// });
+// btns.forEach(function(btn){
+// btn.addEventListener('click', function(e){
+//     const question = e.currentTarget.parentElement.parentElement;
+//     question.classList.toggle('show-text');
+// })
+// })
 
-// minusIcon.addEventListener('click', function(){
-//     plusIcon.classList.remove('show-text');
-//     minusIcon.classList.remove('show-text');
-//     questText.classList.remove('show-text');
-// });
+/*****************/
 
-const btns = document.querySelectorAll('.question-btn');
+//Using Selectors and targeting specific things --option 2
+const questions = document.querySelectorAll('.question');
 
+questions.forEach(function(question){
+    //question references each article
+   const btn = question.querySelector('.question-btn');
 
+   btn.addEventListener('click', function(e){
 
-btns.forEach(function(btn){
-btn.addEventListener('click', function(e){
-    const question = e.currentTarget.parentElement.parentElement;
+    questions.forEach(function(item){
+        /*if article in current loop doesn't match the article in the click event it will remove the class .show-text,closing the question-text section*/
+        if(item !== question){
+        item.classList.remove('show-text');
+        }
+    });
+
     question.classList.toggle('show-text');
-})
-})
+   });
+});
