@@ -1,0 +1,16 @@
+img{
+    width: 200px;
+}
+
+.menu{
+    margin: 0 auto;
+    text-align: center;
+}
+.section-center{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+.menu-item{ 
+    background: grey;
+}
