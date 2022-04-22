@@ -32,3 +32,13 @@ const menu = [
         desc: "stufffffffff fff",
     } 
 ];
+
+const sectionCenter = document.querySelector('.section-center');
+
+window.addEventListener('DOMContentLoaded', function(){
+    let displayMenu = menu.map(function(item){
+
+return item;
+    });
+    console.log(displayMenu);
+});

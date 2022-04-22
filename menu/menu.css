@@ -3,14 +3,32 @@ img{
 }
 
 .menu{
+    max-width: 75%;
     margin: 0 auto;
     text-align: center;
 }
 .section-center{
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr; /* grid-template-columns: repeat(3, 1fr); */
 }
 .menu-item{ 
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
     background: grey;
 }
+
+.img-text{
+    margin: 0;
+}
+
+@media (max-width: 90dd0px){
+    .section-center{
+        display: grid;
+        gap: 1.5rem;
+       grid-template-columns: 1fr; /* grid-template-columns: repeat(3, 1fr); */
+    }
+
+}
+ 
